@@ -16,7 +16,8 @@
   "Coreces an arbitrary array to an ND$J value"
   (^org.nd4j.linalg.api.ndarray.INDArray [a]
     (if (instance? org.nd4j.linalg.api.ndarray.INDArray a)
-               a (mp/construct-matrix canonical-object a))))
+        a 
+        (mp/construct-matrix canonical-object a))))
 
 (defn- column-major-strides
   ^ints [shape]

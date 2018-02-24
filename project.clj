@@ -3,9 +3,14 @@
   :url "https://github.com/whilo/clj-nd4j"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.clojure/clojure "1.7.0"]
-                 [net.mikera/core.matrix "0.36.1"]
-                 [net.mikera/core.matrix.testing "0.0.4"]
-                 [org.nd4j/nd4j-jblas "0.0.3.5.5.5"]
+  :dependencies [[org.clojure/clojure "1.9.0"]
+                 [net.mikera/core.matrix "0.62.0"]
+                 [org.nd4j/nd4j-jblas "0.4-rc3.6"]
                  #_[org.nd4j/jcublas "6.5"]
-                 #_[org.nd4j/nd4j-jcublas-6.5 "0.0.3.5.5.6-SNAPSHOT"]])
+                 #_[org.nd4j/nd4j-jcublas-6.5 "0.0.3.5.5.6-SNAPSHOT"]]
+  
+   :profiles {:dev {:java-source-paths ["src/test/java"]
+                    :dependencies [[net.mikera/cljunit "0.6.0"]
+                                   [net.mikera/core.matrix "0.62.0" :classifier "tests"]]}}
+  
+  )
